@@ -43,8 +43,8 @@ public class Game {
 
     public void play() {
         System.out.println("Use numbers from 1 to 9 to put 'X' or 'O'");
-
         dataPrinter.PrintMappingTable();
+
         final GameTable gameTable = new GameTable();
         if (new Random().nextBoolean()) {
             computerMove.make(gameTable);
@@ -56,13 +56,13 @@ public class Game {
             dataPrinter.printGameTable(gameTable);
             if (winnerVerifier.isUserWin(gameTable)) {
                 System.out.println("You WIN!");
-                System.out.println("Game OVER!");
+                //     System.out.println("Game OVER!");
                 break;
             }
 
             if (drawrVerifier.isDraw(gameTable)) {
                 System.out.println("Draw");
-                System.out.println("Game OVER!");
+                //   System.out.println("Game OVER!");
                 break;
             }
 
@@ -70,17 +70,16 @@ public class Game {
             dataPrinter.printGameTable(gameTable);
             if (winnerVerifier.isComputerWin(gameTable)) {
                 System.out.println("Computer WIN!");
-                System.out.println("Game OVER!");
+                //   System.out.println("Game OVER!");
                 break;
             }
 
             if (drawrVerifier.isDraw(gameTable)) {
                 System.out.println("Draw");
-                System.out.println("Game OVER!");
                 break;
             }
         }
-
+        System.out.println("Game OVER!");
 
     }
 }
