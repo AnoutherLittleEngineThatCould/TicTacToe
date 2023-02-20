@@ -14,14 +14,16 @@
  *  limitations under the License.
  */
 
-package ThatCould.AnoutherLittleEngine.tictactoe;
+package ThatCould.AnoutherLittleEngine.tictactoe.component;
+
+import ThatCould.AnoutherLittleEngine.tictactoe.model.GameTable;
 
 /**
  * @author AnoutherLittleEngineThatCould
  * @link github.com/AnoutherLittleEngineThatCould
  */
-public class DrawrVerifier {
-    public boolean isDraw(final GameTable gameTable) {
-        return false;
+public class UserMove {
+    public void make(final GameTable gameTable) {
+
     }
 }

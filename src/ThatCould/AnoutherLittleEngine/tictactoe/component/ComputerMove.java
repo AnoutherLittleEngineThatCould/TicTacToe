@@ -14,16 +14,16 @@
  *  limitations under the License.
  */
 
-package ThatCould.AnoutherLittleEngine.tictactoe;
+package ThatCould.AnoutherLittleEngine.tictactoe.component;
+
+import ThatCould.AnoutherLittleEngine.tictactoe.model.GameTable;
 
 /**
  * @author AnoutherLittleEngineThatCould
  * @link github.com/AnoutherLittleEngineThatCould
  */
-public class DataPrinter {
-    public void PrintMappingTable() {
-    }
+public class ComputerMove {
+    public void make(final GameTable gameTable) {
 
-    public void printGameTable(final GameTable gameTable) {
     }
 }

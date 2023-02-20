@@ -14,14 +14,20 @@
  *  limitations under the License.
  */
 
-package ThatCould.AnoutherLittleEngine.tictactoe;
+package ThatCould.AnoutherLittleEngine.tictactoe.component;
+
+import ThatCould.AnoutherLittleEngine.tictactoe.model.GameTable;
 
 /**
  * @author AnoutherLittleEngineThatCould
  * @link github.com/AnoutherLittleEngineThatCould
  */
-public class UserMove {
-    public void make(final GameTable gameTable) {
+public class WinnerVerifier {
+    public boolean isUserWin(GameTable gameTable) {
+        return false;
+    }
 
+    public boolean isComputerWin(GameTable gameTable) {
+        return false;
     }
 }

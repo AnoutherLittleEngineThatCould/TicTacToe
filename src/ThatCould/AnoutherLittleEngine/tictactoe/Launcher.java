@@ -16,6 +16,8 @@
 
 package ThatCould.AnoutherLittleEngine.tictactoe;
 
+import ThatCould.AnoutherLittleEngine.tictactoe.component.*;
+
 /**
  * @author AnoutherLittleEngineThatCould
  * @link github.com/AnoutherLittleEngineThatCould

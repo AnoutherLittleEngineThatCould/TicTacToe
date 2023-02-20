@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-package ThatCould.AnoutherLittleEngine.tictactoe;
+package ThatCould.AnoutherLittleEngine.tictactoe.model;
 
 /**
  * @author AnoutherLittleEngineThatCould

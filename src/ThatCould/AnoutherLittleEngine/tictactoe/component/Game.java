@@ -14,7 +14,9 @@
  *  limitations under the License.
  */
 
-package ThatCould.AnoutherLittleEngine.tictactoe;
+package ThatCould.AnoutherLittleEngine.tictactoe.component;
+
+import ThatCould.AnoutherLittleEngine.tictactoe.model.GameTable;
 
 import java.util.Random;
 
