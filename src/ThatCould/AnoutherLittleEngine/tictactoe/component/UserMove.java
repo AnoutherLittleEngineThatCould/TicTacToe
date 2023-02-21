@@ -16,14 +16,51 @@
 
 package ThatCould.AnoutherLittleEngine.tictactoe.component;
 
+import ThatCould.AnoutherLittleEngine.tictactoe.model.Cell;
 import ThatCould.AnoutherLittleEngine.tictactoe.model.GameTable;
+
+import java.util.Scanner;
 
 /**
  * @author AnoutherLittleEngineThatCould
  * @link github.com/AnoutherLittleEngineThatCould
  */
 public class UserMove {
-    public void make(final GameTable gameTable) {
+    private final char[][] mapping = {
+            {'7', '8', '9'},
+            {'4', '5', '6'},
+            {'1', '2', '3'}
+    };
 
+    public void make(final GameTable gameTable) {
+        while (true) {
+            final Cell cell = getUserInput();
+            if (gameTable.isEmpty(cell)) {
+                gameTable.setSign(cell, 'X');
+                return;
+            } else {
+                System.out.println("This cell isn't free!");
+            }
+        }
+    }
+
+    private Cell getUserInput() {
+        while (true) {
+            System.out.println("Enter some 1 to 9 number");
+            final String userInput = new Scanner(System.in).nextLine();
+            if (userInput.length() == 1) {
+                final char userInputChar = userInput.charAt(0);
+                if (userInputChar >= '1' && userInputChar <= '9') {
+                    for (int i = 0; i < 3; i++) {
+                        for (int j = 0; j < 3; j++) {
+                            if (mapping[i][j] == userInputChar) {
+                                return new Cell(i, j);
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
     }
 }
