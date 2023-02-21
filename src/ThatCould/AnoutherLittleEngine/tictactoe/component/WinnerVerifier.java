@@ -16,6 +16,7 @@
 
 package ThatCould.AnoutherLittleEngine.tictactoe.component;
 
+import ThatCould.AnoutherLittleEngine.tictactoe.model.Cell;
 import ThatCould.AnoutherLittleEngine.tictactoe.model.GameTable;
 
 /**
@@ -23,11 +24,32 @@ import ThatCould.AnoutherLittleEngine.tictactoe.model.GameTable;
  * @link github.com/AnoutherLittleEngineThatCould
  */
 public class WinnerVerifier {
+    public boolean isWinner(GameTable gameTable, char sign) {
+        for (int i = 0; i < 3; i++) {
+            if ((gameTable.getSign(new Cell(i, 0)) == sign &&
+                    gameTable.getSign(new Cell(i, 1)) == sign &&
+                    gameTable.getSign(new Cell(i, 2)) == sign) ||
+                    (gameTable.getSign(new Cell(0, i)) == sign &&
+                            gameTable.getSign(new Cell(1, i)) == sign &&
+                            gameTable.getSign(new Cell(0, i)) == sign)
+            ) {
+                return true;
+            }
+        }
+        return (gameTable.getSign(new Cell(0, 0)) == sign &&
+                gameTable.getSign(new Cell(1, 1)) == sign &&
+                gameTable.getSign(new Cell(2, 2)) == sign) ||
+                (gameTable.getSign(new Cell(0, 2)) == sign &&
+                        gameTable.getSign(new Cell(1, 1)) == sign &&
+                        gameTable.getSign(new Cell(0, 2)) == sign);
+    }
+
     public boolean isUserWin(GameTable gameTable) {
-        return false;
+        return isWinner(gameTable, 'X');
     }
 
     public boolean isComputerWin(GameTable gameTable) {
-        return false;
+        return isWinner(gameTable, '0');
+
     }
 }
