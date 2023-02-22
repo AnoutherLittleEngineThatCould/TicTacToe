@@ -31,7 +31,7 @@ public class WinnerVerifier {
                     gameTable.getSign(new Cell(i, 2)) == sign) ||
                     (gameTable.getSign(new Cell(0, i)) == sign &&
                             gameTable.getSign(new Cell(1, i)) == sign &&
-                            gameTable.getSign(new Cell(0, i)) == sign)
+                            gameTable.getSign(new Cell(2, i)) == sign)
             ) {
                 return true;
             }
@@ -41,7 +41,7 @@ public class WinnerVerifier {
                 gameTable.getSign(new Cell(2, 2)) == sign) ||
                 (gameTable.getSign(new Cell(0, 2)) == sign &&
                         gameTable.getSign(new Cell(1, 1)) == sign &&
-                        gameTable.getSign(new Cell(0, 2)) == sign);
+                        gameTable.getSign(new Cell(2, 0)) == sign);
     }
 
     public boolean isUserWin(GameTable gameTable) {
